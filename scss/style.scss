@@ -9,7 +9,7 @@
   max-width: 1110px;
   margin: 0 auto;
   @media (max-width: 1110px) {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 }
 
@@ -169,10 +169,16 @@
 }
 
 .chat {
-  background: rgba(242, 247, 255, 0.5);
-  backdrop-filter: blur(50px);
+  // background: rgba(242, 247, 255, 0.5);
+  // backdrop-filter: blur(50px);
+  background-image: url("/img/BG.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  @media (max-width: 700px) {
+    background-image: url("/img/BG\ \(2\).png");
+  }
 
   // .chat__container
 
@@ -404,9 +410,11 @@
   // .tarif__container
 
   &__container {
-    padding-top: 100px;
+    position: relative;
+    padding-top: 80px;
+    text-align: center;
     @media (max-width: 800px) {
-      padding: 21px;
+      padding: 54px 0 0 0;
       margin: 0 auto;
     }
   }
@@ -451,23 +459,36 @@
     display: flex;
     gap: 30px;
     margin-top: 40px;
+    padding-bottom: 8px;
     @media (max-width: 1100px) {
+      padding: 21px;
       overflow: scroll;
-      gap: 20px;
-      text-align: center;
+      gap: 23px;
     }
   }
   &__boxes::-webkit-scrollbar {
     width: 0;
   }
 
+  &__icons {
+    display: none;
+    @media (max-width: 1100px) {
+      display: block;
+      margin-top: 25px;
+      i {
+        color: #685ed6;
+      }
+    }
+  }
+  //
   // .tarif__box
   &__box {
     background: #fcfeff;
-    box-shadow: 5px 5px 5px rgb(114, 113, 113);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
     border-radius: 6px;
     text-align: center;
     min-width: 330px;
+    margin-right: 7px;
     h3 {
       padding-top: 40px;
       padding-left: 35px;
@@ -523,20 +544,72 @@
 }
 
 .shag {
+  // position: relative;
+  // padding-top: 350px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // &__bacground {
+  //   z-index: 1;
+  //   object-fit: cover;
+  //   width: 100%;
+  // }
+
+  background-image: url("/img/Rectangle\ 594.png");
+  background-repeat: no-repeat;
+  background-position: 0 130.5%;
+  background-size: 100% 60%;
+  @media (max-width: 1067px) {
+    background-position: 0 137.5%; 
+  }
+  @media (max-width: 1000px) {
+    background-image: url("/img/Rectangle\ 594\ \(1\).png");
+    background-size: 100% 40%;
+    background-position: 0 110%;
+  }
+  @media (max-width: 500px) {
+    background-image: url("/img/Rectangle\ 594\ \(2\).png");
+    background-size: 100% 40%;
+    background-position: 0 103%;
+  }
+
   // .shag__container
 
   &__container {
+
+    // position: absolute;
+    // top: 0;
+    z-index: 2;
     position: relative;
-    margin-bottom: -460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     @media (max-width: 1000px) {
-      margin-bottom: -220px;
+      padding: 21px;
+    }
+    @media (max-width: 730px) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
+  &__icons {
+    display: none;
+    @media (max-width: 690px) {
+      position: relative;
+      display: block;
+      i {
+        color: #685ed6;
+      }
+    }
+  }
   .shag__icon1 {
     position: absolute;
     top: 150px;
     left: 190px;
+    // top: 110px;
+    // left: 200px;
     @media (max-width: 1100px) {
       display: none;
     }
@@ -545,6 +618,8 @@
     position: absolute;
     top: 170px;
     left: 305px;
+    // top: 125px;
+    // left: 310px;
     @media (max-width: 1100px) {
       display: none;
     }
@@ -553,6 +628,8 @@
     position: absolute;
     top: 210px;
     left: 370px;
+    // top: 165px;
+    // left: 370px;
     @media (max-width: 1100px) {
       display: none;
     }
@@ -561,6 +638,8 @@
     position: absolute;
     top: 140px;
     left: 610px;
+    // top: 100px;
+    // left: 530px;
     @media (max-width: 1100px) {
       display: none;
     }
@@ -569,6 +648,8 @@
     position: absolute;
     top: 130px;
     left: 715px;
+    // top: 90px;
+    // left: 630px;
     @media (max-width: 1100px) {
       display: none;
     }
@@ -577,6 +658,8 @@
     position: absolute;
     top: 180px;
     left: 820px;
+    // top: 140px;
+    // left: 730px;
     @media (max-width: 1100px) {
       display: none;
     }
@@ -585,6 +668,7 @@
   // .shag__title
 
   &__title {
+    position: relative;
     text-align: center;
     font-weight: 800;
     font-size: 46px;
@@ -594,12 +678,22 @@
       line-height: 40px;
       text-align: center;
     }
+    @media (max-width: 800px) {
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+    @media (max-width: 380px) {
+      margin-right: 20px;
+      margin-left: 20px;
+      // max-width: 331px;
+    }
   }
 
   // .shag__phones
 
   &__phones {
-    padding-top: 56px;
+    position: relative;
+    padding-top: 70px;
     display: flex;
     justify-content: space-between;
     @media (max-width: 810px) {
@@ -621,6 +715,12 @@
   }
 
   // .shag__phone
+  &__phone:nth-child(1) {
+    margin-left: 20px;
+  }
+  &__phone:nth-child(3) {
+    margin-right: 20px;
+  }
 
   &__phone {
     display: flex;
@@ -685,13 +785,13 @@
     display: none;
     @media (max-width: 1000px) {
       padding-top: 30px;
-      display: flex;
+      display: block;
     }
-    @media (max-width: 760px) {
+    @media (max-width: 763px) {
       padding-top: 50px;
     }
-    @media (max-width: 700px) {
-      padding-top: 100px;
+    @media (max-width: 723px) {
+      padding-top: 80px;
     }
   }
 
@@ -706,13 +806,13 @@
     display: none;
     @media (max-width: 1000px) {
       padding-top: 30px;
-      display: flex;
+      display: block;
     }
-    @media (max-width: 760px) {
+    @media (max-width: 763px) {
       padding-top: 50px;
     }
-    @media (max-width: 700px) {
-      padding-top: 100px;
+    @media (max-width: 723px) {
+      padding-top: 80px;
     }
   }
 
@@ -729,8 +829,14 @@
       padding-top: 30px;
       display: block;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 730px) {
+      padding-top: 50px;
+    }
+    @media (max-width: 723px) {
       padding-top: 80px;
+    }
+    @media (max-width: 721px) {
+      padding-top: 60px;
     }
   }
 
@@ -750,8 +856,7 @@
 
   &__container {
     position: relative;
-    padding-top: 640px;
-    position: relative;
+    padding-top: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -760,8 +865,12 @@
       text-align: center;
     }
     @media (max-width: 1000px) {
-      padding: 350px 20px 0 20px;
+      padding: 140px 15px 0 15px;
+      // padding: 0;
       margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+      padding: 140px 0 0 0;
     }
   }
 
@@ -784,9 +893,9 @@
   &__icon {
     position: absolute;
     right: 30px;
-    top: 640px;
+    top: 130px;
     @media (max-width: 1000px) {
-      top: 310px;
+      top: 110px;
     }
     @media (max-width: 850px) {
       img {
@@ -794,7 +903,7 @@
       }
     }
     @media (max-width: 650px) {
-      top: 300px;
+      top: 90px;
       img {
         width: 40%;
       }
@@ -809,6 +918,7 @@
     margin-top: 65px;
     gap: 30px;
     @media (max-width: 1120px) {
+      padding: 22px;
       overflow: scroll;
     }
   }
@@ -818,13 +928,15 @@
   }
 
   // .client__box
-
+  //
   &__box {
     background: #ffffff;
     border-radius: 6px;
     min-width: 540px;
-    box-shadow: 3px 2px 8px rgb(114, 113, 113);
+    margin-left: 11px;
+    box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
     @media (max-width: 650px) {
+      margin-left: 5px;
       min-width: 328px;
       max-height: 283px;
     }
@@ -901,18 +1013,21 @@
     font-size: 14px;
     line-height: 24px;
     color: #1d2530;
+    text-align: start;
   }
 
   // .client__icons
 
   &__icons {
-    margin-left: 35px;
     margin-top: 34px;
     padding-bottom: 80px;
-    img {
-      // width: 100%;
-      object-fit: cover;
+    i {
+      color: #685ed6;
     }
+    // img {
+    //   // width: 100%;
+    //   object-fit: cover;
+    // }
   }
 }
 
@@ -935,6 +1050,7 @@
     border-radius: 6px;
     background-image: url("/img/BG\ Mask.png");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     @media (max-width: 740px) {
       display: flex;
       flex-direction: column;

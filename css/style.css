@@ -133,7 +133,7 @@ h6 {
 }
 @media (max-width: 1110px) {
   .container {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 }
 
@@ -286,11 +286,16 @@ h6 {
 }
 
 .chat {
-  background: rgba(242, 247, 255, 0.5);
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
+  background-image: url("/img/BG.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 700px) {
+  .chat {
+    background-image: url("/img/BG (2).png");
+  }
 }
 .chat__container {
   padding-top: 125px;
@@ -513,11 +518,13 @@ h6 {
   padding-bottom: 100px;
 }
 .tarif__container {
-  padding-top: 100px;
+  position: relative;
+  padding-top: 80px;
+  text-align: center;
 }
 @media (max-width: 800px) {
   .tarif__container {
-    padding: 21px;
+    padding: 54px 0 0 0;
     margin: 0 auto;
   }
 }
@@ -559,23 +566,37 @@ h6 {
   display: flex;
   gap: 30px;
   margin-top: 40px;
+  padding-bottom: 8px;
 }
 @media (max-width: 1100px) {
   .tarif__boxes {
+    padding: 21px;
     overflow: scroll;
-    gap: 20px;
-    text-align: center;
+    gap: 23px;
   }
 }
 .tarif__boxes::-webkit-scrollbar {
   width: 0;
 }
+.tarif__icons {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .tarif__icons {
+    display: block;
+    margin-top: 25px;
+  }
+  .tarif__icons i {
+    color: #685ed6;
+  }
+}
 .tarif__box {
   background: #fcfeff;
-  box-shadow: 5px 5px 5px rgb(114, 113, 113);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
   border-radius: 6px;
   text-align: center;
   min-width: 330px;
+  margin-right: 7px;
 }
 .tarif__box h3 {
   padding-top: 40px;
@@ -623,13 +644,60 @@ h6 {
   margin-bottom: 50px;
 }
 
+.shag {
+  background-image: url("/img/Rectangle 594.png");
+  background-repeat: no-repeat;
+  background-position: 0 130.5%;
+  background-size: 100% 60%;
+}
+@media (max-width: 1067px) {
+  .shag {
+    background-position: 0 137.5%;
+  }
+}
+@media (max-width: 1000px) {
+  .shag {
+    background-image: url("/img/Rectangle 594 (1).png");
+    background-size: 100% 40%;
+    background-position: 0 110%;
+  }
+}
+@media (max-width: 500px) {
+  .shag {
+    background-image: url("/img/Rectangle 594 (2).png");
+    background-size: 100% 40%;
+    background-position: 0 103%;
+  }
+}
 .shag__container {
+  z-index: 2;
   position: relative;
-  margin-bottom: -460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 @media (max-width: 1000px) {
   .shag__container {
-    margin-bottom: -220px;
+    padding: 21px;
+  }
+}
+@media (max-width: 730px) {
+  .shag__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.shag__icons {
+  display: none;
+}
+@media (max-width: 690px) {
+  .shag__icons {
+    position: relative;
+    display: block;
+  }
+  .shag__icons i {
+    color: #685ed6;
   }
 }
 .shag .shag__icon1 {
@@ -693,6 +761,7 @@ h6 {
   }
 }
 .shag__title {
+  position: relative;
   text-align: center;
   font-weight: 800;
   font-size: 46px;
@@ -705,8 +774,21 @@ h6 {
     text-align: center;
   }
 }
+@media (max-width: 800px) {
+  .shag__title {
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+}
+@media (max-width: 380px) {
+  .shag__title {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
 .shag__phones {
-  padding-top: 56px;
+  position: relative;
+  padding-top: 70px;
   display: flex;
   justify-content: space-between;
 }
@@ -730,6 +812,12 @@ h6 {
   .shag__phone:nth-child(2) {
     padding-top: 0;
   }
+}
+.shag__phone:nth-child(1) {
+  margin-left: 20px;
+}
+.shag__phone:nth-child(3) {
+  margin-right: 20px;
 }
 .shag__phone {
   display: flex;
@@ -791,17 +879,17 @@ h6 {
 @media (max-width: 1000px) {
   .shag__first2 {
     padding-top: 30px;
-    display: flex;
+    display: block;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 763px) {
   .shag__first2 {
     padding-top: 50px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 723px) {
   .shag__first2 {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
 .shag__second {
@@ -818,17 +906,17 @@ h6 {
 @media (max-width: 1000px) {
   .shag__second2 {
     padding-top: 30px;
-    display: flex;
+    display: block;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 763px) {
   .shag__second2 {
     padding-top: 50px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 723px) {
   .shag__second2 {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
 .shag__third {
@@ -848,9 +936,19 @@ h6 {
     display: block;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 730px) {
+  .shag__third2 {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 723px) {
   .shag__third2 {
     padding-top: 80px;
+  }
+}
+@media (max-width: 721px) {
+  .shag__third2 {
+    padding-top: 60px;
   }
 }
 .shag__img img {
@@ -864,8 +962,7 @@ h6 {
 }
 .client__container {
   position: relative;
-  padding-top: 640px;
-  position: relative;
+  padding-top: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -878,8 +975,13 @@ h6 {
 }
 @media (max-width: 1000px) {
   .client__container {
-    padding: 350px 20px 0 20px;
+    padding: 140px 15px 0 15px;
     margin: 0 auto;
+  }
+}
+@media (max-width: 800px) {
+  .client__container {
+    padding: 140px 0 0 0;
   }
 }
 .client__title {
@@ -898,11 +1000,11 @@ h6 {
 .client__icon {
   position: absolute;
   right: 30px;
-  top: 640px;
+  top: 130px;
 }
 @media (max-width: 1000px) {
   .client__icon {
-    top: 310px;
+    top: 110px;
   }
 }
 @media (max-width: 850px) {
@@ -912,7 +1014,7 @@ h6 {
 }
 @media (max-width: 650px) {
   .client__icon {
-    top: 300px;
+    top: 90px;
   }
   .client__icon img {
     width: 40%;
@@ -926,6 +1028,7 @@ h6 {
 }
 @media (max-width: 1120px) {
   .client__boxes {
+    padding: 22px;
     overflow: scroll;
   }
 }
@@ -936,10 +1039,12 @@ h6 {
   background: #ffffff;
   border-radius: 6px;
   min-width: 540px;
-  box-shadow: 3px 2px 8px rgb(114, 113, 113);
+  margin-left: 11px;
+  box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
 }
 @media (max-width: 650px) {
   .client__box {
+    margin-left: 5px;
     min-width: 328px;
     max-height: 283px;
   }
@@ -989,15 +1094,14 @@ h6 {
   font-size: 14px;
   line-height: 24px;
   color: #1d2530;
+  text-align: start;
 }
 .client__icons {
-  margin-left: 35px;
   margin-top: 34px;
   padding-bottom: 80px;
 }
-.client__icons img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.client__icons i {
+  color: #685ed6;
 }
 
 .connect {
@@ -1021,6 +1125,7 @@ h6 {
   border-radius: 6px;
   background-image: url("/img/BG Mask.png");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 @media (max-width: 740px) {
   .connect__container {
