@@ -31,9 +31,11 @@
 
   // .header__logo
 
-  //   &__logo {
-
-  //   }
+  &__logo {
+    img {
+      cursor: pointer;
+    }
+  }
 
   &__logo2 {
     margin-top: 10px;
@@ -49,22 +51,22 @@
 
   // .header__button1
   &__button1 {
-    background: #f1e4ff;
+    background: #685ed6;
     box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.07);
     border-radius: 6px;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-    color: #685ed6;
+    color: #ffffff;
     padding: 10px 20px;
     z-index: 2;
   }
 
   &__button1:hover {
     transition: 0.5s;
-    background: #685ed6;
-    color: #ffffff;
+    background: #f1e4ff;
+    color: #685ed6;
   }
   &__button2:hover {
     transition: 0.5s;
@@ -268,7 +270,8 @@
   &__button:hover {
     transition: 0.8s;
     transform: scale(1.1, 1.1);
-    color: rgb(3, 3, 3);
+    color: #685ed6;
+    background: #f1e4ff;
     box-shadow: 5px 5px 5px gray;
   }
 
@@ -560,7 +563,7 @@
   background-position: 0 130.5%;
   background-size: 100% 60%;
   @media (max-width: 1067px) {
-    background-position: 0 137.5%; 
+    background-position: 0 137.5%;
   }
   @media (max-width: 1000px) {
     background-image: url("/img/Rectangle\ 594\ \(1\).png");
@@ -576,7 +579,6 @@
   // .shag__container
 
   &__container {
-
     // position: absolute;
     // top: 0;
     z-index: 2;
@@ -740,13 +742,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    animation-name: circle;
+    // animation: mymove 3s infinite;
     p {
       font-weight: 700;
       font-size: 30px;
       line-height: 30px;
       color: #685ed6;
     }
+    // @keyframes mymove {
+    //   from {left: 0px;}
+    //   to {left: 50px;}
+    // }
   }
   // .shag__name
 
@@ -1133,6 +1139,14 @@
 .footer {
   background: #1d2530;
   position: relative;
+  li,
+  ul,
+  a {
+    cursor: pointer;
+  }
+  a:hover {
+    text-decoration-line: underline;
+  }
   // .footer__container
 
   &__container {
@@ -1146,8 +1160,11 @@
 
   // .footer__logo
 
-  // &__logo {
-  // }
+  &__logo {
+    img {
+      cursor: pointer;
+    }
+  }
 
   // .footer__content
 
@@ -1197,6 +1214,7 @@
     font-size: 16px;
     line-height: 26px;
     color: #eeeff4;
+    cursor: pointer;
     padding-top: 12px;
     @media (max-width: 660px) {
       padding-top: 8px;

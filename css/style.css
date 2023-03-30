@@ -151,6 +151,9 @@ h6 {
   justify-content: space-between;
   padding-top: 30px;
 }
+.header__logo img {
+  cursor: pointer;
+}
 .header__logo2 {
   margin-top: 10px;
 }
@@ -164,21 +167,21 @@ h6 {
   }
 }
 .header__button1 {
-  background: #f1e4ff;
+  background: #685ed6;
   box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.07);
   border-radius: 6px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #685ed6;
+  color: #ffffff;
   padding: 10px 20px;
   z-index: 2;
 }
 .header__button1:hover {
   transition: 0.5s;
-  background: #685ed6;
-  color: #ffffff;
+  background: #f1e4ff;
+  color: #685ed6;
 }
 .header__button2:hover {
   transition: 0.5s;
@@ -384,7 +387,8 @@ h6 {
 .chat__button:hover {
   transition: 0.8s;
   transform: scale(1.1, 1.1);
-  color: rgb(3, 3, 3);
+  color: #685ed6;
+  background: #f1e4ff;
   box-shadow: 5px 5px 5px gray;
 }
 @media (max-width: 700px) {
@@ -834,7 +838,6 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
-  animation-name: circle;
 }
 .shag__number p {
   font-weight: 700;
@@ -1203,6 +1206,14 @@ h6 {
   background: #1d2530;
   position: relative;
 }
+.footer li,
+.footer ul,
+.footer a {
+  cursor: pointer;
+}
+.footer a:hover {
+  text-decoration-line: underline;
+}
 .footer__container {
   display: flex;
   padding-top: 111px;
@@ -1212,6 +1223,9 @@ h6 {
   .footer__container {
     padding-top: 60px;
   }
+}
+.footer__logo img {
+  cursor: pointer;
 }
 .footer__content {
   margin-left: 390px;
@@ -1262,6 +1276,7 @@ h6 {
   font-size: 16px;
   line-height: 26px;
   color: #eeeff4;
+  cursor: pointer;
   padding-top: 12px;
 }
 @media (max-width: 660px) {
